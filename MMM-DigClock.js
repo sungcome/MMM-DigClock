@@ -80,7 +80,7 @@ Module.register("MMM-DigClock", {
 		}
 
 		var hourSymbol = "HH";
-		if (this.config.timeFormat !== 24) {
+		if (this.config.timeFormat !== 12) {
 			hourSymbol = "h";
 		}
 
