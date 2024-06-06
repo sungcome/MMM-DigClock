@@ -84,7 +84,7 @@ Module.register("MMM-DigClock", {
 			hourSymbol = "h";
 		}
 
-		timeString = now.format(hourSymbol + ":mm" + ":ss");
+		timeString = now.format(hourSymbol + ":mm");
 
 		if(this.config.showDate){
 			dateWrapper.innerHTML = now.format(this.config.dateFormat);
@@ -96,8 +96,8 @@ Module.register("MMM-DigClock", {
 
 		digitalWrapper = document.createElement("div");
 		digitalWrapper.className = "digital";
-		digitalWrapper.appendChild(dateWrapper);
 		digitalWrapper.appendChild(timeWrapper);
+		digitalWrapper.appendChild(dateWrapper);
 		digitalWrapper.appendChild(weekWrapper);
 
 		wrapper.appendChild(digitalWrapper);
